@@ -144,19 +144,44 @@ desc Enrollments;
 -- Add a column 'PhoneNumber' to store student contact numbers.
 
 -- Write your SQL query below Codespace:
+create table students
+(Name varchar(15),
+Age int,
+email varchar(15),
+address varchar(15)
+);
 
+Alter table students
+add Phonenumber varchar(15);
+
+desc students;
 DESC STUDENTS; -- [[ COPYPASTE OF THE OUTPUT in CSV Format and terminate with ; ]]
 
 -- Task 5: Modify the Courses Table
 -- Change the data type of the 'Credits' column to DECIMAL.
 -- Write your SQL query below Codespace:
+CREATE TABLE courses (
+  courseID VARCHAR(15)  PRIMARY KEY,
+  coursename VARCHAR(50),
+  credits INT
+);
 
+desc courses;
+
+alter table courses
+modify credits decimal(8,2);
+
+desc courses;
 -- Task 6: Drop Tables
 
 SHOW TABLES; -- Before dropping the table
 
 -- Drop the 'Courses' and 'Enrollments' tables from the database.
 -- Write your SQL query below Codespace:
+drop table if exists Enrollements;
+drop table if exists courses; 
+
+drop table Enrollements;
 
 SHOW TABLES; -- After dropping the table Enrollement and Course
 
